@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'gambetta_italic';
+    src: url('./font/Gambetta-MediumItalic.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'gambetta_title';
+    src: url('./font/Gambetta-Semibold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: "gambetta-title-nav";
+    src: url('./font/Gambetta-Bold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: "gambatta_noitalic";
+    src: url("./font/Gambetta-Medium.otf") format('opentype');
+}
+
+h1 {
+    font-family: 'gambetta_title';
+}
+
+p{
+    font-family: "gambetta_italic";
+}
+
+a, span {
+    font-family: "gambetta_noitalic";
+}
+
+.font-nav {
+    font-family: 'gambetta_title';
+}
+
+.font-title-nav {
+    font-family: "gambetta-title-nav";
+}
+
+.invers-img{
+    transform: scale(-1,1);
+}
