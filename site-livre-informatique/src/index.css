@@ -45,3 +45,15 @@ a, span {
 .invers-img{
     transform: scale(-1,1);
 }
+
+.image-size{
+    height: 125px;
+    width: 125px;
+}
+
+@media screen and (min-width: 600px){
+    .image-size{
+        height: 150px;
+        width: 150px;
+    }
+}
