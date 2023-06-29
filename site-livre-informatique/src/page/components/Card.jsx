@@ -1,33 +1,31 @@
 import { useEffect, useState } from "react";
 import api from "./api";
 
-const Card = () => {
-        const [books, setBooks] = useState([]);
-        const [isMounted, setIsMounted] = useState(false);
+function Card(){
+    const [books, setBooks] = useState([]);
+    const [isMounted, setIsMounted] = useState(false);
 
-        useEffect(() => {
-            !isMounted &&
-              api.getBooks().then((json) => {
-                setBooks(json);
-                setIsMounted(true);
-              });
-          }, [isMounted]);
+    useEffect(() => {
+        !isMounted &&
+        api.getBooks().then((json) => {
+            setBooks(json);
+            setIsMounted(true);
+        });
+    }, [isMounted]);
 
-          console.log(api.getBooks())
-
-        return (
-    -       <div>
-                {books && books.map((book, index) => {
-                    return (
-                        <article key={index}>
-                            <img>{book.imgage}</img>
-                            <h4>{book.title}</h4>
-                            <p>{book.author}</p>
-                        </article>
-                    );
-                })}
-            </div>
-        );
-};
+    return (
+        <figure className="flex flex-wrap">
+            {books.map((book) =>(
+                <article key={book.title} className="flex">
+                    <img src={book.image} height="100" width="100"></img>
+                    <aside>
+                        <h1>{book.title}</h1>
+                        <p>{book.author}</p>
+                    </aside>
+                </article>
+            ))}
+        </figure>
+    );
+}
 
 export default Card;

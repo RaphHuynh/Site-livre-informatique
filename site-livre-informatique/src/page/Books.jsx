@@ -6,15 +6,17 @@ export default Books;
 
 function Books(){
     return(
-        <div>
+        <body>
             <NavBar/>
-            <section className="flex items-center w-full min-h-screen justify-center px-44">
-                <h1 className="text-4xl">Liste des livres</h1>
-                <article className="items-center">
-                    <Card/>
-                </article>
-            </section>
+            <main className="flex items-center w-full min-h-screen justify-center px-44">
+                <section className="">
+                    <h1 className="text-4xl text-center">Liste des livres</h1>
+                    <article className="flex flex-wrap justify-center">
+                        <Card/>
+                    </article>
+                </section>
+            </main>
             <Footer/>
-        </div>
+        </body>
     )
 }
